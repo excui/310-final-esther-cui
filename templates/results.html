@@ -1,0 +1,46 @@
+<html>
+  <body style="background-color:rgb(243, 150, 199);"></body>
+  <head><title>List of {{brand}} {{type}} products</title></head>
+  <container>
+    <div>
+      <h1>List of {{brand}} {{type}} products</h1>
+    </div>
+    {% if products | length == 0 %}
+    <container>
+        <div class="text-center">
+            <h5>There are no products that match your criteria. Please try again.
+            </h5>
+        </div>
+    </container>>
+    {% else %}
+      {% for product in products %}
+        <container>
+          <div>
+            <style>
+              img {
+                width: 200 px;
+                height: auto;
+              }
+            </style>
+            <img src="{{product.image}}" alt="Image not available">
+            <h6>{{product.name}}</h6>
+            <p>Type: {{product.type}} and Category: {{product.category}}</p>
+            <p>Price: {{product.price}}</p>
+            <p>Decription: {{product.description}}</p>
+            <p>Tags: {{product.vegan}} and {{product.cruelty_free}}</p>
+            <br>
+          </div>
+        </container>
+      {% endfor %}
+    {% endif %}
+  <footer>
+    <style>
+      footer {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    </style>
+    Data from <a href="https://makeup-api.herokuapp.com/">Makeup API</a>.
+  </footer>
+</html>
+

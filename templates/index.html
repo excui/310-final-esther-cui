@@ -1,0 +1,70 @@
+<html>
+  <body style="background-color:rgb(243, 150, 199);"></body>
+  <br>
+  <h1>
+    <style>
+      h1 {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 400;
+      }
+    </style>
+    Your Guide to Popular Drugstore Makeup in the US
+  </h1>
+  <form action="/results" method="post">
+    <style>
+      p {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    </style>
+    <p>
+      <label for="brand">Choose a brand:</label><br>
+      <select id="brand" name="brand_name">
+        <option value="colourpop" selected>Colourpop</option>
+        <option value="covergirl">CoverGirl</option>
+        <option value="e.l.f.">e.l.f.</option>
+        <option value="l'oreal">L'Oreal</option>
+        <option value="maybelline">Maybelline</option>
+        <option value="milani">Milani Cosmetics</option>
+        <option value="nyx">NYX</option>
+        <option value="pacifica">Pacifica Beauty</option>
+        <option value="revlon">Revlon</option>
+        <option value="smashbox">Smashbox</option>
+        <option value="wet n wild">wet n wild</option>
+      </select>
+    </p>
+    <p>
+      <label for="type">Choose a product type:</label><br>
+      <select id="product_type" name="product_type">
+        <option value="blush" selected>Blush</option>
+        <option value="bronzer">Bronzer</option>
+        <option value="eyebrow">Eyebrow</option>
+        <option value="eyeliner">Eyeliner</option>
+        <option value="eyeshadow">Eyeshadow</option>
+        <option value="foundation">Foundation</option>
+        <option value="lip_liner">Lip Liner</option>
+        <option value="lipstick">Lipstick</option>
+        <option value="mascara">Mascara</option>
+      </select>
+    </p>
+    <p>
+      <label for="price_range">Choose a price range:</label><br>
+      <select id="price_range" name="price_range">
+        <option value="under_five" selected>$5 and under</option>
+        <option value="between_five_ten" selected>Between $5 to $10</option>
+        <option value="above_ten" selected>$10 and above</option>
+      </select>
+    </p>
+    <p><input type="submit" value="SUBMIT"></p>
+  </form>
+  <footer>
+    <style>
+      footer {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    </style>
+    Data from <a href="https://makeup-api.herokuapp.com/">Makeup API</a>.
+  </footer>
+</html>
