@@ -8,7 +8,7 @@ These are the following input values that I will be using for the index:
     - brand name
     - product type (i.e. foundation, blush, eyeliner, etc)
     - product category (i.e. liquid, pencil, powder, etc)
-    - price range
+    - sorting price by either lowest to highest or highest to lowest
     - a default tag list provided by the API
     
 Based on the input values, I will be returning the following information
