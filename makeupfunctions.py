@@ -155,9 +155,9 @@ def combine_all_info(product_list, brand, type, price_range):
         else:
             new_dict['vegan'] = 'Not Vegan'
         if 'cruelty free' in product['tag_list']:
-            new_dict['cruelty_free'] = 'Cruelty Free'
+            new_dict['cruelty_free'] = 'cruelty Free'
         else:
-            new_dict['cruelty_free'] = 'Not cruelty free'
+            new_dict['cruelty_free'] = 'not cruelty free'
         filtered_final_list.append(new_dict)
     return filtered_final_list
 
