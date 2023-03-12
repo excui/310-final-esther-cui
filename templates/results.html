@@ -1,38 +1,38 @@
 <html>
-  <body style="background-color:rgb(243, 150, 199);"></body>
-  <head><title>List of {{brand}} {{type}} products</title></head>
+  <body style="background-color:rgb(251, 194, 205);"></body>
+  <head>
+    <title>List of {{brand}} {{type}} products</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+  </head>
   <container>
     <div>
       <h1>List of {{brand}} {{type}} products</h1>
     </div>
     {% if products | length == 0 %}
-    <container>
-        <div class="text-center">
-            <h5>There are no products that match your criteria. Please try again.
-            </h5>
-        </div>
-    </container>>
+      <container>
+          <div class="error">
+              <h2>There are no products that match your criteria. Please try again.
+              </h2>
+          </div>
+      </container>
     {% else %}
       {% for product in products %}
         <container>
-          <div>
-            <style>
-              img {
-                width: 200 px;
-                height: auto;
-              }
-            </style>
-            <img src="{{product.image}}" alt="Image not available">
-            <h6>{{product.name}}</h6>
-            <p>Type: {{product.type}} and Category: {{product.category}}</p>
-            <p>Price: {{product.price}}</p>
-            <p>Decription: {{product.description}}</p>
-            <p>Tags: {{product.vegan}} and {{product.cruelty_free}}</p>
+          <div class="item">
+            <div class="picture">
+              <img src="{{product.image}}" alt="Image not available">
+            </div>
+            <h3>{{product.name}}</h3>
+            <p><b>Type:</b> {{product.type}} and <b>Category:</b> {{product.category}}</p>
+            <p><b>Estimated Price:</b> {{product.price}}</p>
+            <p><b>Decription:</b> {{product.description}}</p>
+            <p>{{product.vegan}} and {{product.cruelty_free}}</p>
             <br>
           </div>
         </container>
       {% endfor %}
     {% endif %}
+  <br>
   <footer>
     <style>
       footer {
