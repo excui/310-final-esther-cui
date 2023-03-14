@@ -86,7 +86,7 @@ def product_type(product_list, type_name):
 #
 # Parameters:
 # product_type_list = a list of brand, and type specific products returned
-#                     from product_type
+#                     from product_type (list)
 
 
 def under_five(product_type_list):
@@ -126,6 +126,19 @@ def above_ten(product_type_list):
 # pprint.pprint(middle_colourpop_lipsticks)
 # print("Expensive")
 # pprint.pprint(expensive_colourpop_lipsticks)
+
+# Function: combine_all_info
+# This last function takes all of the previous functions to create the
+# full filtered list based on brand, product type, and price range.
+# This will return a list of dictionaries, where each dictionary contains
+# the needed information for one product. This information will then be
+# used to process in the resulting page.
+#
+# Parameters:
+# product_list = the initial list of all products from get_all_makeup()
+# brand = brand name returned from the form
+# type = product type name returned from the form
+# price range = price range value returned from the form
 
 
 def combine_all_info(product_list, brand, type, price_range):
